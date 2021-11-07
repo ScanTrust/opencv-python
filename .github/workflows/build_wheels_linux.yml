@@ -66,12 +66,12 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: wheels
-        path: wheelhouse/opencv*.whl
+        path: wheelhouse/st-opencv*.whl
     - name: Saving a wheel accordingly to matrix
       uses: actions/upload-artifact@v3
       with:
         name: wheel-${{ matrix.with_contrib }}-${{ matrix.without_gui }}-${{ matrix.build_sdist }}
-        path: wheelhouse/opencv*.whl
+        path: wheelhouse/st-opencv*.whl
 
   Test:
     needs: [Build]
