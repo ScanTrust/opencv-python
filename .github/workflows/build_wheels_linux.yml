@@ -62,6 +62,13 @@ jobs:
         fetch-depth: 0
     - name: Build a package
       run: source scripts/build.sh
+    - name: Log cmake stuff
+      continue-on-error: true
+      if: ${{ failure() }}
+      uses: actions/upload-artifact@v3
+      with:
+        name: CMake build dir
+        path: /io/_skbuild/linux-x86_64-3.7
     - name: Saving all wheels
       uses: actions/upload-artifact@v3
       with:

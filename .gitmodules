@@ -4,6 +4,7 @@
 [submodule "opencv_contrib"]
 	path = opencv_contrib
 	url = https://github.com/scantrust/opencv_contrib.git
+	branch = feature/add-scantust-qr-reader
 [submodule "multibuild"]
 	path = multibuild
 	url = https://github.com/multi-build/multibuild.git
